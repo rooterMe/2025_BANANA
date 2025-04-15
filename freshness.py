@@ -53,7 +53,7 @@ def process_and_save_labels(input_folder, output_folder):
     image_files = sorted(glob(os.path.join(input_folder, "*.png")))
 
     # 보정값 계산 (1.png 기준)
-    yellow_image_path = os.path.join(input_folder, "1.png")
+    yellow_image_path = os.path.join(input_folder, "001.png")
     yellow = compute_yellow_value(yellow_image_path)
     print(f"보정값(correction): {yellow}")
 

@@ -44,6 +44,6 @@ def process_and_save_labels(input_folder, output_folder):
     print(f"{len(image_files)}개의 이미지가 {output_folder}에 저장되었습니다.")
 
 # 실행
-input_folder = "Dataset/banana_0_seq"
-output_folder = "Dataset/banana_0_test"
+input_folder = "Dataset/banana_0/image"
+output_folder = "Dataset/banana_0/mask"
 process_and_save_labels(input_folder, output_folder)
