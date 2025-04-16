@@ -64,11 +64,11 @@ def process_and_save_labels(input_folder, output_folder):
 
         txt_path = os.path.join(output_folder, f"{num}.txt")
         with open(txt_path, "w") as f:
-            f.write(f"{num}\n{ratio:.8f}")
+            f.write(f"{str(int(num))}\n{ratio:.8f}")
 
     print(f"완료: {len(image_files)}개의 txt 파일이 생성되었습니다.")
 
 # 실행
-input_folder = "Dataset/banana_0_seq"
-output_folder = "Dataset/banana_0_label"
+input_folder = "Dataset/banana_0/image"
+output_folder = "Dataset/banana_0/label"
 process_and_save_labels(input_folder, output_folder)
