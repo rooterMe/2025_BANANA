@@ -13,7 +13,7 @@ def segment_and_colorize(image_path, output_path):
     banana_mask = cv2.inRange(img_hsv, lower_banana, upper_banana)
 
     # 노란색 범위 (upper 값 낮춤: 너무 밝거나 선명한 노랑 제외)
-    lower_yellow = np.array([18, 100, 100])
+    lower_yellow = np.array([18, 100, 200])
     upper_yellow = np.array([35, 255, 255])  # upper 낮춤
 
     yellow_mask = cv2.inRange(img_hsv, lower_yellow, upper_yellow)
@@ -44,6 +44,6 @@ def process_and_save_labels(input_folder, output_folder):
     print(f"{len(image_files)}개의 이미지가 {output_folder}에 저장되었습니다.")
 
 # 실행
-input_folder = "Dataset/banana_4/image"
-output_folder = "Dataset/banana_4/mask"
+input_folder = "Dataset/banana_2/image"
+output_folder = "Dataset/banana_2/mask"
 process_and_save_labels(input_folder, output_folder)

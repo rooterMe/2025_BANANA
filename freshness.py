@@ -13,7 +13,7 @@ def compute_yellow_value(image_path):
     banana_mask = cv2.inRange(img_hsv, lower_banana, upper_banana)
 
     # 노란색 마스크
-    lower_yellow = np.array([20, 100, 100])
+    lower_yellow = np.array([20, 100, 150])
     upper_yellow = np.array([35, 255, 255])
     yellow_mask = cv2.inRange(img_hsv, lower_yellow, upper_yellow)
 
@@ -35,7 +35,7 @@ def compute_banana_freshness(image_path, yellow):
     banana_mask = cv2.inRange(img_hsv, lower_banana, upper_banana)
 
     # 노란색 마스크
-    lower_yellow = np.array([20, 100, 100])
+    lower_yellow = np.array([20, 100, 200])
     upper_yellow = np.array([35, 255, 255])
     yellow_mask = cv2.inRange(img_hsv, lower_yellow, upper_yellow)
 
@@ -69,6 +69,6 @@ def process_and_save_labels(input_folder, output_folder):
     print(f"완료: {len(image_files)}개의 txt 파일이 생성되었습니다.")
 
 # 실행
-input_folder = "Dataset/banana_0/image"
-output_folder = "Dataset/banana_0/label"
+input_folder = "Dataset/banana_2/image"
+output_folder = "Dataset/banana_2/label"
 process_and_save_labels(input_folder, output_folder)
