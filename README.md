@@ -8,7 +8,7 @@ Woohyun Park, Kangmin Ra, Gyumin Kim. **"Prediction of Banana Freshness Using an
 
 This project predicts a banana’s entire freshness trajectory from only the first 10–30% of an image sequence captured hourly in varied environments. We propose a variable-length Encoder–Decoder LSTM that supports early-partial inference.
 
-#### dataset
+### dataset
 
 Dataset folder provides banana time-series images and their corresponding labels, grouped by sequence.
 
